@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulk Orders — GreenNest</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="GreenNest bulk plant, pot, soil, seed, fertilizer and tool ordering for landscapers, offices, hotels, schools, events and large gardens.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0', 300: '#86efac',
+              400: '#4ade80', 500: '#22c55e', 600: '#16a34a', 700: '#15803d',
+              800: '#166534', 900: '#14532d'
+            },
+            cream: {
+              50: '#fefae0', 100: '#fcf6d4', 200: '#f7ecc0', 300: '#f0dfa0',
+              400: '#e6cc7a', 500: '#dbb95a', 600: '#c9a344', 700: '#a8823a',
+              800: '#8a6834', 900: '#716031'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-cream-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 theme-loading">
+
+  <script src="js/main.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+
+  <main class="pt-16 lg:pt-20">
+
+    <!-- Header -->
+    <section class="relative hero-gradient text-white py-12 lg:py-16 overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="assets/images/bulk%20orders%20hero.jpg" alt="GreenNest bulk orders hero" class="w-full h-full object-cover">
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-r from-green-950/90 via-green-900/75 to-green-900/55"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav class="text-sm text-green-200/80 mb-4">
+          <a href="index.html" class="hover:text-white">Home</a>
+          <span class="mx-2">/</span>
+          <span class="text-white">Bulk Orders</span>
+        </nav>
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between">
+          <div class="max-w-2xl">
+            <h1 class="text-3xl sm:text-4xl font-bold mb-3 hero-text-shadow">Bulk Orders for Business &amp; Beyond</h1>
+            <p class="text-green-100/90 hero-text-shadow">Premium plants and garden supplies at competitive wholesale pricing — serving landscapers, offices, hotels, schools, events and large gardens.</p>
+          </div>
+          <a href="#enquiry" class="mt-6 lg:mt-0 inline-flex items-center px-6 py-3 bg-white text-green-800 font-semibold rounded-xl hover:bg-green-50 transition-colors shadow-lg shrink-0">
+            <i data-lucide="send" class="w-5 h-5 mr-2"></i> Request a Quote
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who We Serve -->
+    <section class="py-12 lg:py-16 bg-white dark:bg-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <span class="text-sm font-semibold text-green-600 dark:text-green-400 uppercase tracking-wider">Who We Serve</span>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mt-2">Built for Every Kind of Greenery</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-cream-50 dark:bg-gray-900 rounded-2xl p-8 shadow-sm card-hover">
+            <div class="w-14 h-14 bg-green-100 dark:bg-green-900/40 rounded-2xl flex items-center justify-center mb-4">
+              <i data-lucide="scissors" class="w-7 h-7 text-green-700 dark:text-green-400"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Landscapers</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Bulk plants, soil and tools for residential and commercial landscaping projects with reliable, timely delivery.</p>
+          </div>
+
+          <div class="bg-cream-50 dark:bg-gray-900 rounded-2xl p-8 shadow-sm card-hover">
+            <div class="w-14 h-14 bg-green-100 dark:bg-green-900/40 rounded-2xl flex items-center justify-center mb-4">
+              <i data-lucide="building-2" class="w-7 h-7 text-green-700 dark:text-green-400"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Offices</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Biophilic office plants that boost wellbeing and productivity. Maintenance plans available.</p>
+          </div>
+
+          <div class="bg-cream-50 dark:bg-gray-900 rounded-2xl p-8 shadow-sm card-hover">
+            <div class="w-14 h-14 bg-green-100 dark:bg-green-900/40 rounded-2xl flex items-center justify-center mb-4">
+              <i data-lucide="hotel" class="w-7 h-7 text-green-700 dark:text-green-400"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Hotels</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Create welcoming lobbies and courtyards with elegant, low-maintenance plant displays and premium pots.</p>
+          </div>
+
+          <div class="bg-cream-50 dark:bg-gray-900 rounded-2xl p-8 shadow-sm card-hover">
+            <div class="w-14 h-14 bg-green-100 dark:bg-green-900/40 rounded-2xl flex items-center justify-center mb-4">
+              <i data-lucide="school" class="w-7 h-7 text-green-700 dark:text-green-400"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Schools</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Educational gardens and durable, safe planters that inspire students to connect with nature.</p>
+          </div>
+
+          <div class="bg-cream-50 dark:bg-gray-900 rounded-2xl p-8 shadow-sm card-hover">
+            <div class="w-14 h-14 bg-green-100 dark:bg-green-900/40 rounded-2xl flex items-center justify-center mb-4">
+              <i data-lucide="party-popper" class="w-7 h-7 text-green-700 dark:text-green-400"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Events</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Stunning plant and flower installations for weddings, launches and corporate events of any scale.</p>
+          </div>
+
+          <div class="bg-cream-50 dark:bg-gray-900 rounded-2xl p-8 shadow-sm card-hover">
+            <div class="w-14 h-14 bg-green-100 dark:bg-green-900/40 rounded-2xl flex items-center justify-center mb-4">
+              <i data-lucide="tree-pine" class="w-7 h-7 text-green-700 dark:text-green-400"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Large Gardens</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Everything for big spaces — bulk soil, quality seeds, fertilizers and professional-grade tools.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enquiry Form -->
+    <section id="enquiry" class="py-12 lg:py-16 bg-white dark:bg-gray-800">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <span class="text-sm font-semibold text-green-600 dark:text-green-400 uppercase tracking-wider">Get a Quote</span>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mt-2">Request a Bulk Order Enquiry</h2>
+          <p class="text-gray-600 dark:text-gray-400 mt-2">Tell us what you need and our team will get back to you within 24 hours.</p>
+        </div>
+
+        <form id="bulk-enquiry-form" class="bg-cream-50 dark:bg-gray-900 rounded-3xl p-6 sm:p-8 shadow-sm">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label for="bulk-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Full Name *</label>
+              <input type="text" id="bulk-name" name="name" placeholder="Enter your name" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500">
+              <p class="field-error hidden text-xs text-red-600 mt-1"></p>
+            </div>
+            <div>
+              <label for="bulk-company" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Company *</label>
+              <input type="text" id="bulk-company" name="company" placeholder="Company or organization" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500">
+              <p class="field-error hidden text-xs text-red-600 mt-1"></p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label for="bulk-email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email *</label>
+              <input type="email" id="bulk-email" name="email" placeholder="you@company.com" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500">
+              <p class="field-error hidden text-xs text-red-600 mt-1"></p>
+            </div>
+            <div>
+              <label for="bulk-phone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Phone *</label>
+              <input type="tel" id="bulk-phone" name="phone" placeholder="+1 (555) 000-0000" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500">
+              <p class="field-error hidden text-xs text-red-600 mt-1"></p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label for="bulk-requirement" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">What do you need? *</label>
+              <select id="bulk-requirement" name="requirement" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500">
+                <option value="">Select a category</option>
+                <option value="plants">Bulk Plants</option>
+                <option value="pots">Pots</option>
+                <option value="soil">Soil</option>
+                <option value="seeds">Seeds</option>
+                <option value="fertilizers">Fertilizers</option>
+                <option value="tools">Gardening Tools</option>
+                <option value="mixed">Mixed / Custom Package</option>
+              </select>
+              <p class="field-error hidden text-xs text-red-600 mt-1"></p>
+            </div>
+            <div>
+              <label for="bulk-quantity" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Approximate Quantity *</label>
+              <input type="number" id="bulk-quantity" name="quantity" min="1" placeholder="e.g. 100" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500">
+              <p class="field-error hidden text-xs text-red-600 mt-1"></p>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <label for="bulk-message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message *</label>
+            <textarea id="bulk-message" name="message" rows="4" placeholder="Tell us about your project, timeline and requirements..." class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500 resize-none"></textarea>
+            <p class="field-error hidden text-xs text-red-600 mt-1"></p>
+          </div>
+
+          <button type="submit" class="w-full py-4 bg-green-700 hover:bg-green-800 dark:bg-green-600 dark:hover:bg-green-700 text-white font-semibold rounded-xl transition-colors shadow-lg flex items-center justify-center">
+            <i data-lucide="send" class="w-5 h-5 mr-2"></i>
+            Submit Enquiry
+          </button>
+          <p class="text-xs text-gray-400 dark:text-gray-500 text-center mt-4">No spam. Your details are only used to respond to your enquiry.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('bulk-enquiry-form');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        let valid = true;
+
+        const fields = [
+          { id: 'bulk-name', label: 'Please enter your full name' },
+          { id: 'bulk-company', label: 'Please enter your company' },
+          { id: 'bulk-email', label: 'Please enter a valid email address', validate: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
+          { id: 'bulk-phone', label: 'Please enter a valid phone number' },
+          { id: 'bulk-requirement', label: 'Please select a requirement' },
+          { id: 'bulk-quantity', label: 'Please enter a valid quantity', validate: (v) => Number(v) >= 1 && Number(v) > 0 },
+          { id: 'bulk-message', label: 'Please enter a message', validate: (v) => v.length >= 10 }
+        ];
+
+        fields.forEach(function (f) {
+          const el = document.getElementById(f.id);
+          const errEl = el.parentElement.querySelector('.field-error');
+          let value = el.value.trim();
+          let error = '';
+
+          if (!value) {
+            error = f.label;
+          } else if (f.validate && !f.validate(value)) {
+            error = f.label;
+          }
+
+          if (error) {
+            el.classList.add('border-red-500');
+            el.classList.remove('focus:ring-2', 'focus:ring-green-500');
+            errEl.textContent = error;
+            errEl.classList.remove('hidden');
+            valid = false;
+          } else {
+            el.classList.remove('border-red-500');
+            el.classList.add('focus:ring-2', 'focus:ring-green-500');
+            errEl.classList.add('hidden');
+          }
+        });
+
+        if (valid) {
+          showToast('Enquiry submitted successfully! We\'ll be in touch within 24 hours.', 'success');
+          form.reset();
+          const prefs = JSON.parse(localStorage.getItem('greennest_preferences') || '{}');
+          prefs.bulkEnquiries = (prefs.bulkEnquiries || 0) + 1;
+          localStorage.setItem('greennest_preferences', JSON.stringify(prefs));
+        } else {
+          showToast('Please fix the errors in the form.', 'error');
+        }
+      });
+
+      // Clear error on input
+      form.querySelectorAll('input, select, textarea').forEach(function (el) {
+        el.addEventListener('input', function () {
+          el.classList.remove('border-red-500');
+          const errEl = el.parentElement.querySelector('.field-error');
+          if (errEl) errEl.classList.add('hidden');
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

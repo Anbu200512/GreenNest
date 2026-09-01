@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — GreenNest</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="Log in to your GreenNest account.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: { 50: '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0', 300: '#86efac', 400: '#4ade80', 500: '#22c55e', 600: '#16a34a', 700: '#15803d', 800: '#166534', 900: '#14532d' },
+            cream: { 50: '#fefae0', 100: '#fcf6d4', 200: '#f7ecc0', 300: '#f0dfa0', 400: '#e6cc7a', 500: '#dbb95a', 600: '#c9a344', 700: '#a8823a', 800: '#8a6834', 900: '#716031' }
+          },
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] }
+        }
+      }
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-cream-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 theme-loading">
+
+  <script src="js/main.js"></script>
+
+  <!-- Minimal Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 shadow-sm no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-9 h-9 bg-green-700 dark:bg-green-500 rounded-xl flex items-center justify-center transition-transform group-hover:scale-110 shrink-0">
+            <i data-lucide="leaf" class="w-5 h-5 text-white"></i>
+          </div>
+          <span class="text-xl font-bold text-green-800 dark:text-green-300 tracking-tight">GreenNest</span>
+        </a>
+
+        <div class="flex items-center space-x-2">
+          <button onclick="toggleTheme()" class="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" title="Toggle theme">
+            <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+            <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+          </button>
+          <button onclick="toggleDir()" class="px-2.5 py-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-sm font-semibold" title="Toggle RTL / LTR direction" id="dir-toggle">
+            <span id="dir-label">LTR</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-20 min-h-screen flex items-center justify-center py-12">
+    <div class="w-full max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-lg overflow-hidden grid grid-cols-1 lg:grid-cols-2">
+
+        <div class="hidden lg:flex relative h-full">
+          <img src="assets/images/1.jpg" alt="GreenNest plants" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-green-900/20 to-transparent flex items-end p-8">
+            <div>
+              <h2 class="text-2xl font-bold text-white">Welcome back</h2>
+              <p class="text-green-100/90 text-sm">Log in to continue growing your dream garden with GreenNest.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-8 sm:p-10">
+          <div class="mb-8">
+            <div class="w-14 h-14 bg-green-100 dark:bg-green-900/40 rounded-2xl flex items-center justify-center mb-4 lg:hidden">
+              <i data-lucide="leaf" class="w-7 h-7 text-green-700 dark:text-green-400"></i>
+            </div>
+            <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Log in to GreenNest</h1>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Enter your details to access your account</p>
+          </div>
+
+          <form id="login-form">
+            <div class="mb-5">
+              <label for="login-email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
+              <input type="email" id="login-email" name="email" placeholder="you@email.com" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-cream-50 dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500">
+              <p class="field-error hidden text-xs text-red-600 mt-1"></p>
+            </div>
+
+            <div class="mb-4">
+              <div class="flex items-center justify-between mb-2">
+                <label for="login-password" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Password</label>
+                <a href="#" class="text-xs text-green-700 dark:text-green-400 hover:underline">Forgot password?</a>
+              </div>
+              <div class="relative">
+                <input type="password" id="login-password" name="password" placeholder="Enter your password" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-cream-50 dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500 pr-11">
+                <button type="button" onclick="togglePassword('login-password', this)" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">
+                  <i data-lucide="eye" class="w-5 h-5"></i>
+                </button>
+              </div>
+              <p class="field-error hidden text-xs text-red-600 mt-1"></p>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 bg-green-700 hover:bg-green-800 dark:bg-green-600 dark:hover:bg-green-700 text-white font-semibold rounded-xl transition-colors flex items-center justify-center mb-4">
+              <i data-lucide="log-in" class="w-5 h-5 mr-2"></i>Login
+            </button>
+
+            <div class="flex items-center gap-3 mb-5">
+              <span class="flex-1 h-px bg-gray-200 dark:bg-gray-700"></span>
+              <span class="text-xs text-gray-400 dark:text-gray-500 font-medium">Or continue with</span>
+              <span class="flex-1 h-px bg-gray-200 dark:bg-gray-700"></span>
+            </div>
+
+            <div class="grid grid-cols-3 gap-3 mb-5">
+              <button type="button" onclick="socialLogin('Google')" class="flex items-center justify-center gap-2 py-3 border border-gray-300 dark:border-gray-600 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                <svg width="20" height="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3l5.7-5.7C34.2 6.3 29.4 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.9 1.2 8 3l5.7-5.7C34.2 6.3 29.4 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2c-1.9 1.4-4.3 2.2-7.2 2.2-5 0-9.4-3.3-11.3-8l-6.5 5C9.6 39.6 16.3 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4 5.6l6.2 5.2C40.6 36.8 44 31.1 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg>
+                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Google</span>
+              </button>
+              <button type="button" onclick="socialLogin('Facebook')" class="flex items-center justify-center gap-2 py-3 border border-gray-300 dark:border-gray-600 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.77-3.91 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.9h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg>
+                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Facebook</span>
+              </button>
+              <button type="button" onclick="socialLogin('Apple')" class="flex items-center justify-center gap-2 py-3 border border-gray-300 dark:border-gray-600 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M16.36 12.83c.03 3.09 2.71 4.11 2.74 4.13-.02.08-.43 1.47-1.41 2.91-.85 1.25-1.74 2.5-3.13 2.52-1.37.02-1.81-.81-3.37-.81-1.56 0-2.05.79-3.34.83-1.34.04-2.36-1.36-3.22-2.61C2.66 17.27 1.3 12.4 3.03 9.14c.87-1.65 2.44-2.69 4.14-2.72 1.29-.03 2.5.87 3.29.87.79 0 2.27-1.08 3.82-.92.65.03 2.47.26 3.64 1.97-.09.06-2.17 1.27-2.16 4.49zM13.07 4.24c.72-.87 1.2-2.08 1.07-3.24-1.04.04-2.3.7-3.04 1.58-.66.78-1.24 2.02-1.08 3.21 1.14.09 2.31-.59 3.05-1.55z"/></svg>
+                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Apple</span>
+              </button>
+            </div>
+
+            <p class="text-sm text-center text-gray-500 dark:text-gray-400">
+              Don't have an account?
+              <a href="signup.html" class="text-green-700 dark:text-green-400 font-medium hover:underline">Sign up</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function socialLogin(provider) {
+      showToast(provider + ' login is not configured yet, but you\'re one step closer!', 'success');
+    }
+
+    function togglePassword(id, btn) {
+      const input = document.getElementById(id);
+      const isPassword = input.type === 'password';
+      input.type = isPassword ? 'text' : 'password';
+      btn.innerHTML = isPassword
+        ? '<i data-lucide="eye-off" class="w-5 h-5"></i>'
+        : '<i data-lucide="eye" class="w-5 h-5"></i>';
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      updateDirLabel();
+      updateThemeIcons();
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+
+      const form = document.getElementById('login-form');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        let valid = true;
+        const fields = [
+          { el: document.getElementById('login-email'), label: 'Please enter a valid email address', validate: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
+          { el: document.getElementById('login-password'), label: 'Please enter your password', validate: (v) => v.length >= 6 }
+        ];
+        fields.forEach(function (f) {
+          const value = f.el.value.trim();
+          const err = f.el.parentElement.querySelector('.field-error');
+          let error = '';
+          if (!value) error = f.label;
+          else if (f.validate && !f.validate(value)) error = f.label;
+          if (error) { f.el.classList.add('border-red-500'); err.textContent = error; err.classList.remove('hidden'); valid = false; }
+          else { f.el.classList.remove('border-red-500'); err.classList.add('hidden'); }
+        });
+        if (valid) {
+          showToast('Login successful! Welcome back to GreenNest.', 'success');
+          form.reset();
+        } else {
+          showToast('Please fix the errors in the form.', 'error');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

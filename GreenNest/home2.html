@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenNest — Home 2</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="GreenNest — premium plants, pots, soil, seeds, fertilizers and gardening tools to bring nature home.">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0', 300: '#86efac', 400: '#4ade80', 500: '#22c55e', 600: '#16a34a', 700: '#15803d', 800: '#166534', 900: '#14532d'
+            },
+            earth: {
+              50: '#fafaf9', 100: '#f5f5f4', 200: '#e7e5e4', 300: '#d6d3d1', 400: '#a8a29e', 500: '#78716c', 600: '#57534e', 700: '#44403c', 800: '#292524', 900: '#1c1917'
+            },
+            cream: {
+              50: '#fefae0', 100: '#fcf6d4', 200: '#f7ecc0', 300: '#f0dfa0', 400: '#e6cc7a', 500: '#dbb95a', 600: '#c9a344', 700: '#a8823a', 800: '#8a6834', 900: '#716031'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Lucide Icons via CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-cream-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 theme-loading">
+
+  <!-- JS components (nav, footer, cart render here) -->
+  <script src="js/main.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+
+  <!-- ================= HOME 2 PAGE CONTENT ================= -->
+
+  <main class="pt-16 lg:pt-20">
+
+    <!-- HERO (full-width image hero, centered) -->
+    <section class="relative text-white overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="assets/images/home2%20hero.jpg" alt="Lush indoor plants" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-900/95 via-green-800/85 to-green-950/90"></div>
+      </div>
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-36 text-center">
+        <span class="inline-flex items-center px-4 py-1.5 bg-white/10 border border-white/20 text-green-100 text-sm font-medium rounded-full mb-6 backdrop-blur">
+          <i data-lucide="leaf" class="w-4 h-4 mr-2"></i>
+          Nurtured with care since 2015
+        </span>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-up">
+          Grow Something <span class="text-green-300">Beautiful</span> Every Day
+        </h1>
+        <p class="text-lg text-green-100/90 mb-8 max-w-2xl mx-auto">
+          From rare houseplants to everyday garden essentials — everything you need to make your home bloom, delivered with love.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center animate-fade-in-up">
+          <a href="products.html" class="px-8 py-4 bg-green-500 hover:bg-green-400 text-white font-semibold rounded-xl transition-colors shadow-lg flex items-center justify-center">
+            <i data-lucide="shopping-bag" class="w-5 h-5 mr-2"></i>
+            Shop Collection
+          </a>
+          <a href="plant-care.html" class="px-8 py-4 bg-white/10 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/20 transition-colors backdrop-blur flex items-center justify-center">
+            <i data-lucide="sprout" class="w-5 h-5 mr-2"></i>
+            Plant Care Guides
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <section class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+          <div>
+            <p class="text-3xl sm:text-4xl font-extrabold text-green-700 dark:text-green-400"><span data-count="12000">0</span>+</p>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Plants Delivered</p>
+          </div>
+          <div>
+            <p class="text-3xl sm:text-4xl font-extrabold text-green-700 dark:text-green-400"><span data-count="8500">0</span>+</p>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Happy Gardeners</p>
+          </div>
+          <div>
+            <p class="text-3xl sm:text-4xl font-extrabold text-green-700 dark:text-green-400"><span data-count="10">0</span>+</p>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Years Growing</p>
+          </div>
+          <div>
+            <p class="text-3xl sm:text-4xl font-extrabold text-green-700 dark:text-green-400"><span data-count="35">0</span>+</p>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Products &amp; Guides</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOP BY CATEGORY -->
+    <section class="py-16 lg:py-24 bg-white dark:bg-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 reveal">
+          <span class="text-sm font-semibold text-green-600 dark:text-green-400 uppercase tracking-wider">Explore the Collection</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mt-2">Shop by Category</h2>
+          <p class="text-gray-600 dark:text-gray-400 mt-2 max-w-2xl mx-auto">Find exactly what your green space needs — all in one place.</p>
+        </div>
+        <div id="category-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- FEATURED FAVORITES -->
+    <section class="py-16 lg:py-24 bg-cream-50 dark:bg-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 reveal">
+          <div>
+            <span class="text-sm font-semibold text-green-600 dark:text-green-400 uppercase tracking-wider">Customer Favorites</span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mt-2">Our Most Loved Plants</h2>
+            <p class="text-gray-600 dark:text-gray-400 mt-2 max-w-xl">Hand-picked bestsellers our community can't get enough of.</p>
+          </div>
+          <a href="products.html" class="mt-4 sm:mt-0 inline-flex items-center text-green-700 dark:text-green-400 font-medium hover:underline">
+            View all products <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+          </a>
+        </div>
+        <div id="featured-products" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- WHY GREENNEST (split / image + checklist) -->
+    <section class="py-16 lg:py-24 bg-white dark:bg-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="reveal">
+            <span class="text-sm font-semibold text-green-600 dark:text-green-400 uppercase tracking-wider">The GreenNest Difference</span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mt-2 mb-4">Why Thousands Choose Us</h2>
+            <p class="text-gray-600 dark:text-gray-400 mb-6">We go beyond selling plants — we help you grow confidence, one green leaf at a time.</p>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start">
+                <div class="w-8 h-8 bg-green-100 dark:bg-green-900/40 rounded-lg flex items-center justify-center mr-3 shrink-0">
+                  <i data-lucide="shield-check" class="w-5 h-5 text-green-700 dark:text-green-400"></i>
+                </div>
+                <div>
+                  <p class="font-semibold text-gray-900 dark:text-white">Live Plant Guarantee</p>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">Every plant arrives healthy, packed with care, or we replace it free.</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div class="w-8 h-8 bg-green-100 dark:bg-green-900/40 rounded-lg flex items-center justify-center mr-3 shrink-0">
+                  <i data-lucide="truck" class="w-5 h-5 text-green-700 dark:text-green-400"></i>
+                </div>
+                <div>
+                  <p class="font-semibold text-gray-900 dark:text-white">Fast, Safe Delivery</p>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">Nationwide shipping with temperature-safe packaging year-round.</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div class="w-8 h-8 bg-green-100 dark:bg-green-900/40 rounded-lg flex items-center justify-center mr-3 shrink-0">
+                  <i data-lucide="phone-call" class="w-5 h-5 text-green-700 dark:text-green-400"></i>
+                </div>
+                <div>
+                  <p class="font-semibold text-gray-900 dark:text-white">Expert Support</p>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">Real plant lovers on call to help you care for every purchase.</p>
+                </div>
+              </li>
+            </ul>
+            <a href="about.html" class="inline-flex items-center px-6 py-3 bg-green-700 hover:bg-green-800 dark:bg-green-600 dark:hover:bg-green-700 text-white font-semibold rounded-xl transition-colors">
+              Learn More About Us <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+            </a>
+          </div>
+          <div class="relative reveal reveal-delay-1">
+            <img src="assets/images/1.jpg" alt="A healthy plant at GreenNest" class="rounded-3xl shadow-xl w-full h-96 lg:h-[28rem] object-cover">
+            <div class="absolute -bottom-6 left-6 bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-4 flex items-center space-x-3">
+              <div class="w-12 h-12 bg-green-100 dark:bg-green-900/40 rounded-xl flex items-center justify-center">
+                <i data-lucide="award" class="w-6 h-6 text-green-700 dark:text-green-400"></i>
+              </div>
+              <div>
+                <p class="text-xl font-extrabold text-green-700 dark:text-green-400">4.9/5</p>
+                <p class="text-xs text-gray-500 dark:text-gray-400">Average customer rating</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-16 lg:py-24 bg-cream-50 dark:bg-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 reveal">
+          <span class="text-sm font-semibold text-green-600 dark:text-green-400 uppercase tracking-wider">Happy Gardeners</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mt-2">What Our Customers Say</h2>
+        </div>
+        <div id="testimonial-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="py-16 lg:py-24 hero-gradient text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <i data-lucide="mail" class="w-12 h-12 text-green-300 mx-auto mb-6"></i>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-3">Get Gardening Tips &amp; Offers</h2>
+        <p class="text-green-100/90 mb-8">Join our newsletter for seasonal advice, exclusive deals, and growing inspiration.</p>
+        <form class="newsletter-form flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+          <input type="email" placeholder="Enter your email address" class="newsletter-input flex-1 px-5 py-3.5 rounded-xl bg-white text-gray-900 placeholder-gray-400 focus:outline-none" required>
+          <button type="submit" class="px-8 py-3.5 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-xl transition-colors shadow-lg flex items-center justify-center">
+            <i data-lucide="send" class="w-4 h-4 mr-2"></i>
+            Subscribe
+          </button>
+        </form>
+        <p class="text-xs text-green-200/70 mt-4">We respect your privacy. Unsubscribe anytime.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Inline Home 2 initialization -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var categories = [
+        { name: 'Indoor Plants', icon: 'flower-2', color: 'bg-green-600', href: 'products.html?category=Indoor%20Plants' },
+        { name: 'Flower Pots', icon: 'flower', color: 'bg-gradient-to-br from-amber-400 to-amber-600', href: 'products.html?category=Flower%20Pots' },
+        { name: 'Soil', icon: 'mountain', color: 'bg-gradient-to-br from-amber-700 to-amber-900', href: 'products.html?category=Soil' },
+        { name: 'Seeds', icon: 'sprout', color: 'bg-green-600', href: 'products.html?category=Seeds' },
+        { name: 'Fertilizers', icon: 'droplets', color: 'bg-green-700', href: 'products.html?category=Fertilizers' },
+        { name: 'Gardening Tools', icon: 'wrench', color: 'bg-gradient-to-br from-gray-400 to-gray-600', href: 'products.html?category=Gardening%20Tools' }
+      ];
+      document.getElementById('category-grid').innerHTML = categories.map(function (c) {
+        var count = getAllProducts().filter(function (p) { return p.category === c.name; }).length;
+        return `
+          <a href="${c.href}" class="group bg-cream-50 dark:bg-gray-900 rounded-2xl p-8 border border-gray-100 dark:border-gray-700 hover:border-green-300 dark:hover:border-green-600 hover:shadow-lg card-hover transition-all reveal">
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 ${c.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                <i data-lucide="${c.icon}" class="w-7 h-7 text-white"></i>
+              </div>
+              <i data-lucide="arrow-up-right" class="w-5 h-5 text-gray-300 dark:text-gray-600 group-hover:text-green-600 transition-colors"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-green-700 transition-colors">${c.name}</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">${count} products</p>
+          </a>`;
+      }).join('');
+
+      var featured = [4, 3, 6, 7].map(getProductById).filter(Boolean);
+      document.getElementById('featured-products').innerHTML = featured.map(function (p) { return createProductCard(p); }).join('');
+
+      var testimonials = [
+        { name: 'Sarah Mitchell', role: 'Plant Parent', text: 'The Monstera I ordered arrived thriving and gorgeous. GreenNest has completely transformed my living room!' },
+        { name: 'James Carter', role: 'Urban Gardener', text: 'Incredible selection and fast delivery. Their care guides helped me keep everything blooming beautifully.' },
+        { name: 'Priya Patel', role: 'First-time Grower', text: 'As a beginner I was nervous, but the expert support and quality products made it effortless. Highly recommend.' }
+      ];
+      document.getElementById('testimonial-grid').innerHTML = testimonials.map(function (t, i) {
+        return `
+          <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm hover:shadow-lg card-hover reveal reveal-delay-${i}">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-green-100 dark:bg-green-900/40 rounded-full flex items-center justify-center">
+                <i data-lucide="user" class="w-5 h-5 text-green-700 dark:text-green-400"></i>
+              </div>
+              <div class="ml-3">
+                <p class="font-semibold text-gray-900 dark:text-white">${t.name}</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">${t.role}</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-0.5 mb-4" data-lucide-replace="true">${createStarIcons(5)}</div>
+            <p class="text-gray-600 dark:text-gray-300">"${t.text}"</p>
+          </div>`;
+      }).join('');
+
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+
+      var counters = document.querySelectorAll('[data-count]');
+      counters.forEach(function (el) {
+        var target = parseInt(el.getAttribute('data-count'), 10);
+        var start = 0;
+        var duration = 1200;
+        var step = Math.max(1, Math.floor(target / 60));
+        var t = setInterval(function () {
+          start += step;
+          if (start >= target) { start = target; clearInterval(t); }
+          el.textContent = start.toLocaleString();
+        }, duration / 60);
+      });
+
+      if (typeof initScrollAnimations === 'function') initScrollAnimations();
+    });
+  </script>
+
+</body>
+</html>

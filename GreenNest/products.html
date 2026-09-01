@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products — GreenNest</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="Browse GreenNest's premium indoor plants, flower pots, soil, seeds, fertilizers and gardening tools.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0', 300: '#86efac',
+              400: '#4ade80', 500: '#22c55e', 600: '#16a34a', 700: '#15803d',
+              800: '#166534', 900: '#14532d'
+            },
+            cream: {
+              50: '#fefae0', 100: '#fcf6d4', 200: '#f7ecc0', 300: '#f0dfa0',
+              400: '#e6cc7a', 500: '#dbb95a', 600: '#c9a344', 700: '#a8823a',
+              800: '#8a6834', 900: '#716031'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-cream-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 theme-loading">
+
+  <script src="js/main.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+
+  <main class="pt-16 lg:pt-20">
+
+    <!-- Page Header -->
+    <section class="relative hero-gradient text-white py-12 lg:py-16 overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="assets/images/products%20hero.jpg" alt="GreenNest products hero" class="w-full h-full object-cover">
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-r from-green-950/90 via-green-900/75 to-green-900/55"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav class="text-sm text-green-200/80 mb-4">
+          <a href="index.html" class="hover:text-white">Home</a>
+          <span class="mx-2">/</span>
+          <span class="text-white">Products</span>
+        </nav>
+        <h1 class="text-3xl sm:text-4xl font-bold mb-3 hero-text-shadow">Our Products</h1>
+        <p class="text-green-100/90 max-w-2xl hero-text-shadow">Premium plants, pots, soil, seeds, fertilizers and tools — everything your garden needs to thrive.</p>
+      </div>
+    </section>
+
+    <!-- Filters + Products -->
+    <section class="py-10 lg:py-14">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div>
+
+          <!-- Products Area -->
+          <div>
+            <!-- Search + Sort -->
+            <div class="flex flex-col sm:flex-row gap-3 mb-6">
+              <div class="relative flex-1">
+                <i data-lucide="search" class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                <input type="text" id="product-search" placeholder="Search products..." class="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500" oninput="updateSearch(this.value)">
+              </div>
+              <div>
+                <select id="sort-select" onchange="updateSort(this.value)" class="w-full sm:w-auto px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500">
+                  <option value="featured">Sort: Featured</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="name">Name: A to Z</option>
+                  <option value="rating">Top Rated</option>
+                </select>
+              </div>
+            </div>
+
+            <p id="products-count" class="text-sm text-gray-500 dark:text-gray-400 mb-6">35 products found</p>
+
+            <!-- Products Grid -->
+            <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+
+            <!-- No products state -->
+            <div id="no-products" class="hidden text-center py-20">
+              <div class="w-20 h-20 bg-green-50 dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="search-x" class="w-10 h-10 text-green-300 dark:text-gray-600"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">No products found</h3>
+              <p class="text-gray-500 dark:text-gray-400 mb-6">Try adjusting your search or filters.</p>
+              <button onclick="clearFilters()" class="px-6 py-3 bg-green-700 hover:bg-green-800 text-white font-medium rounded-xl transition-colors">Clear Filters</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    function updateSearch(value) {
+      currentFilters.search = value;
+      applyFilters();
+    }
+  </script>
+
+</body>
+</html>

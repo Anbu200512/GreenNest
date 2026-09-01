@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — GreenNest</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="Learn about GreenNest, our mission, our story, and why thousands of gardeners trust us for plants, pots, and garden supplies.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: { 50: '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0', 300: '#86efac', 400: '#4ade80', 500: '#22c55e', 600: '#16a34a', 700: '#15803d', 800: '#166534', 900: '#14532d' },
+            cream: { 50: '#fefae0', 100: '#fcf6d4', 200: '#f7ecc0', 300: '#f0dfa0', 400: '#e6cc7a', 500: '#dbb95a', 600: '#c9a344', 700: '#a8823a', 800: '#8a6834', 900: '#716031' }
+          },
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] }
+        }
+      }
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-cream-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 theme-loading">
+
+  <script src="js/main.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+
+  <main class="pt-16 lg:pt-20">
+
+    <!-- Header -->
+    <section class="relative hero-gradient text-white py-12 lg:py-16 overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="assets/images/about%20hero.jpg" alt="GreenNest hero" class="w-full h-full object-cover">
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-r from-green-950/90 via-green-900/75 to-green-900/55"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav class="text-sm text-green-200/80 mb-4">
+          <a href="index.html" class="hover:text-white">Home</a>
+          <span class="mx-2">/</span>
+          <span class="text-white">About Us</span>
+        </nav>
+        <h1 class="text-3xl sm:text-4xl font-bold mb-3 hero-text-shadow">Growing Green, Together</h1>
+        <p class="text-green-100/90 max-w-2xl hero-text-shadow">Since 2015, GreenNest has helped thousands of people transform their spaces — indoors and out — with premium plants and garden essentials.</p>
+      </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="py-12 lg:py-16 bg-white dark:bg-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="reveal">
+            <span class="text-sm font-semibold text-green-600 dark:text-green-400 uppercase tracking-wider">Our Story</span>
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mt-2 mb-4">From a Small Greenhouse to Your Garden</h2>
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+              GreenNest started as a family-run greenhouse with a simple belief: everyone deserves to enjoy the calm and joy that plants bring. What began with a small collection of houseplants has grown into a trusted destination for plants, pots, soil, seeds, fertilizers, and tools.
+            </p>
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+              Today, our team of horticulturists curates every product we sell, from hand-picked air-purifying plants to nutrient-rich organic soils. We stand behind everything with our Live Arrival Guarantee and a genuine passion for helping you grow.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <div class="bg-green-50 dark:bg-green-900/40 rounded-2xl px-6 py-4">
+                <p class="text-2xl font-bold text-green-700 dark:text-green-400">12k+</p>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Happy Customers</p>
+              </div>
+              <div class="bg-green-50 dark:bg-green-900/40 rounded-2xl px-6 py-4">
+                <p class="text-2xl font-bold text-green-700 dark:text-green-400">250+</p>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Plant Varieties</p>
+              </div>
+              <div class="bg-green-50 dark:bg-green-900/40 rounded-2xl px-6 py-4">
+                <p class="text-2xl font-bold text-green-700 dark:text-green-400">8+</p>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Years Growing</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-1">
+            <div class="rounded-3xl overflow-hidden shadow-2xl h-96">
+              <img src="assets/images/about.jpg" alt="GreenNest nursery and plants" class="w-full h-full object-cover">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="py-12 lg:py-16 bg-cream-50 dark:bg-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 reveal">
+          <span class="text-sm font-semibold text-green-600 dark:text-green-400 uppercase tracking-wider">What We Stand For</span>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mt-2">Our Mission &amp; Values</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm hover:shadow-lg card-hover reveal">
+            <div class="w-14 h-14 bg-green-100 dark:bg-green-900/40 rounded-2xl flex items-center justify-center mb-5">
+              <i data-lucide="leaf" class="w-7 h-7 text-green-700 dark:text-green-400"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Sustainability First</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">We use bioplastic pots, recycled packaging, and source ethically grown plants. Our commitment to the planet runs through everything we do.</p>
+          </div>
+
+          <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm hover:shadow-lg card-hover reveal reveal-delay-1">
+            <div class="w-14 h-14 bg-green-100 dark:bg-green-900/40 rounded-2xl flex items-center justify-center mb-5">
+              <i data-lucide="sparkles" class="w-7 h-7 text-green-700 dark:text-green-400"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Quality Without Compromise</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">Every plant and product is inspected by our horticulturists. We only sell what we'd be proud to grow in our own gardens.</p>
+          </div>
+
+          <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm hover:shadow-lg card-hover reveal reveal-delay-2">
+            <div class="w-14 h-14 bg-green-100 dark:bg-green-900/40 rounded-2xl flex items-center justify-center mb-5">
+              <i data-lucide="users" class="w-7 h-7 text-green-700 dark:text-green-400"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">People &amp; Plants</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">Gardening is for everyone. Our experts provide free guidance, workshops, and friendly support to help you succeed at any level.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="py-12 lg:py-16 bg-white dark:bg-gray-800">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 reveal">
+          <span class="text-sm font-semibold text-green-600 dark:text-green-400 uppercase tracking-wider">Our Journey</span>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mt-2">Milestones Along the Way</h2>
+        </div>
+
+        <div class="space-y-8">
+          <div class="flex reveal">
+            <div class="mr-6 flex flex-col items-center">
+              <div class="w-4 h-4 bg-green-600 rounded-full mt-1"></div>
+              <div class="w-px flex-1 bg-green-200 dark:bg-green-900"></div>
+            </div>
+            <div class="pb-2">
+              <p class="font-semibold text-green-700 dark:text-green-400">2015</p>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">The First Greenhouse</h3>
+              <p class="text-gray-600 dark:text-gray-400">We opened our doors with a small collection of hand-grown houseplants.</p>
+            </div>
+          </div>
+
+          <div class="flex reveal">
+            <div class="mr-6 flex flex-col items-center">
+              <div class="w-4 h-4 bg-green-600 rounded-full mt-1"></div>
+              <div class="w-px flex-1 bg-green-200 dark:bg-green-900"></div>
+            </div>
+            <div class="pb-2">
+              <p class="font-semibold text-green-700 dark:text-green-400">2018</p>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Expanding the Range</h3>
+              <p class="text-gray-600 dark:text-gray-400">Added soils, seeds, fertilizers, and a full line of professional gardening tools.</p>
+            </div>
+          </div>
+
+          <div class="flex reveal">
+            <div class="mr-6 flex flex-col items-center">
+              <div class="w-4 h-4 bg-green-600 rounded-full mt-1"></div>
+              <div class="w-px flex-1 bg-green-200 dark:bg-green-900"></div>
+            </div>
+            <div class="pb-2">
+              <p class="font-semibold text-green-700 dark:text-green-400">2021</p>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Going Online</h3>
+              <p class="text-gray-600 dark:text-gray-400">Launched our online store so plant lovers everywhere can shop from home.</p>
+            </div>
+          </div>
+
+          <div class="flex reveal">
+            <div class="mr-6 flex flex-col items-center">
+              <div class="w-4 h-4 bg-green-600 rounded-full mt-1"></div>
+            </div>
+            <div class="pb-2">
+              <p class="font-semibold text-green-700 dark:text-green-400">Today</p>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">A Community of Thousands</h3>
+              <p class="text-gray-600 dark:text-gray-400">Serving 12,000+ happy gardeners with premium plants and unbeatable support.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-12 lg:py-16 bg-cream-50 dark:bg-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-br from-green-600 to-green-800 rounded-3xl p-8 sm:p-12 text-white text-center relative overflow-hidden reveal">
+          <div class="absolute -left-10 -top-10 w-48 h-48 bg-white/10 rounded-full blur-2xl"></div>
+          <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-white/10 rounded-full blur-2xl"></div>
+          <h2 class="text-3xl sm:text-4xl font-bold mb-3">Come Grow With Us</h2>
+          <p class="text-green-100/90 max-w-xl mx-auto mb-6">Explore our collection or visit us in store — we'd love to help you create something beautiful.</p>
+          <div class="flex flex-col sm:flex-row justify-center gap-3">
+            <a href="products.html" class="px-8 py-3 bg-white text-green-800 font-semibold rounded-xl hover:bg-green-50 transition-colors">Shop Products</a>
+            <a href="contact.html" class="px-8 py-3 bg-green-500/30 border border-green-300/40 text-white font-semibold rounded-xl hover:bg-green-500/40 transition-colors">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

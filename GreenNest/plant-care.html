@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant Care Guide — GreenNest</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="Expert plant care guides on watering, soil, fertilizer, seeds, pots, pest prevention and seasonal gardening from GreenNest.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0', 300: '#86efac',
+              400: '#4ade80', 500: '#22c55e', 600: '#16a34a', 700: '#15803d',
+              800: '#166534', 900: '#14532d'
+            },
+            cream: {
+              50: '#fefae0', 100: '#fcf6d4', 200: '#f7ecc0', 300: '#f0dfa0',
+              400: '#e6cc7a', 500: '#dbb95a', 600: '#c9a344', 700: '#a8823a',
+              800: '#8a6834', 900: '#716031'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-cream-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 theme-loading">
+
+  <script src="js/main.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+
+  <!-- Plant care articles data -->
+  <script>
+    const careArticles = [
+      {
+        id: 1, title: 'Indoor Plant Care: A Complete Beginner Guide', category: 'Indoor Care', icon: 'flower-2', image: 'https://images.unsplash.com/photo-1616486024711-25659dcfe4fa',
+        excerpt: 'Learn the essentials of keeping houseplants healthy — from light, watering, humidity to feeding.',
+        content: `
+          <p>Caring for indoor plants doesn't have to be complicated. With the right fundamentals, anyone can grow a thriving indoor jungle.</p>
+          <h3>Light</h3>
+          <p>Every plant needs light to photosynthesize. Low-light plants like snake plants and pothos can thrive away from windows, while flowering plants need bright, indirect light near east or north-facing windows.</p>
+          <h3>Water</h3>
+          <p>Overwatering is the #1 cause of houseplant death. Always check the top inch of soil — water only when it feels dry. Most indoor plants prefer to dry out slightly between waterings.</p>
+          <h3>Humidity</h3>
+          <p>Tropical plants love humidity. Mist leaves regularly, use a pebble tray, or place a humidifier nearby during dry months.</p>
+          <h3>Feeding</h3>
+          <p>Fertilize monthly during the growing season (spring and summer) with a balanced houseplant food. Skip fertilizer in winter when growth slows.</p>
+          <h3>Pro Tip</h3>
+          <p>Rotate your plants weekly so they grow evenly toward the light. Dust leaves monthly to keep them photosynthesizing efficiently.</p>
+        `
+      },
+      {
+        id: 2, title: 'The Art of Watering: How Much & How Often', category: 'Watering', icon: 'droplets', image: 'https://images.unsplash.com/photo-1586005360028-7f1d7d6d2f6c',
+        excerpt: 'Master the watering schedule for every type of plant with these simple, foolproof rules.',
+        content: `
+          <p>Watering is the single most important skill in gardening. Get it right and plants flourish; get it wrong and they struggle.</p>
+          <h3>The Finger Test</h3>
+          <p>Insert your index finger about 2 inches into the soil. If it's dry, water. If it's still moist, wait a few more days. This beats any calendar schedule.</p>
+          <h3>Water Deeply, Less Often</h3>
+          <p>Give plants a thorough soak so water reaches deep roots, rather than frequent shallow sprinkles. Deep watering encourages strong root systems.</p>
+          <h3>Seasonal Adjustments</h3>
+          <p>Plants use less water in winter. Reduce frequency during cooler months and increase in hot summer periods.</p>
+          <h3>Container Plants</h3>
+          <p>Potted plants dry out faster than ground plants. Check them more frequently, especially in summer.</p>
+          <h3>Morning is Best</h3>
+          <p>Water in the morning so leaves dry during the day, reducing the risk of fungal diseases.</p>
+        `
+      },
+      {
+        id: 3, title: 'Choosing the Right Soil for Your Plants', category: 'Soil', icon: 'mountain', image: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399',
+        excerpt: 'Not all soil is equal. Discover which potting mixes suit which plants for healthy roots.',
+        content: `
+          <p>Healthy soil is the foundation of a healthy plant. The right mix provides anchorage, water, oxygen and nutrients.</p>
+          <h3>All-Purpose Potting Mix</h3>
+          <p>Great for most houseplants and general use. Contains peat or coir, perlite and compost for balanced drainage and nutrition.</p>
+          <h3>Cactus & Succulent Mix</h3>
+          <p>Extra-gritty and fast-draining to prevent rot. Perfect for cacti, succulents and other drought-tolerant plants.</p>
+          <h3>Seed Starting Mix</h3>
+          <p>Fine, light and sterile for germinating seeds and rooting cuttings. Low in nutrients but ideal for delicate young roots.</p>
+          <h3>Raised Bed & Garden Soil</h3>
+          <p>Heavier, nutrient-rich mix for outdoor beds and vegetables. Improves structure and moisture retention.</p>
+          <h3>Add Organic Matter</h3>
+          <p>Regularly amend soil with compost or worm castings to maintain fertility and beneficial microbial life.</p>
+        `
+      },
+      {
+        id: 4, title: 'Fertilizer Basics: Feed Your Plants Right', category: 'Fertilizers', icon: 'droplets', image: 'https://images.unsplash.com/photo-1585336261022-680e295ce3fe',
+        excerpt: 'Understand N-P-K ratios and when to fertilize for lush growth and abundant blooms.',
+        content: `
+          <p>Fertilizer supplies the nutrients plants need to grow strong and bloom beautifully. Understanding the basics makes all the difference.</p>
+          <h3>N-P-K Explained</h3>
+          <p>Fertilizer labels show three numbers: Nitrogen (N) for leaves, Phosphorus (P) for roots and blooms, Potassium (K) for overall health. A balanced 10-10-10 feeds everything equally.</p>
+          <h3>Types of Fertilizer</h3>
+          <p>Liquid fertilizers act fast and are great for pots. Slow-release granules feed over months. Organic options build long-term soil health.</p>
+          <h3>When to Fertilize</h3>
+          <p>Feed actively growing plants in spring and summer. Reduce or stop in winter when growth naturally slows.</p>
+          <h3>Don't Overdo It</h3>
+          <p>More fertilizer isn't better. Over-fertilizing can burn roots and cause leaf damage. Always follow label instructions.</p>
+          <h3>Signs of Deficiency</h3>
+          <p>Yellowing leaves may signal nitrogen deficiency; poor blooms may mean low phosphorus. Adjust accordingly.</p>
+        `
+      },
+      {
+        id: 5, title: 'Seed Planting: From Packet to Sprout', category: 'Seeds', icon: 'sprout', image: 'https://images.unsplash.com/photo-1593519242801-2df4b6e493a8',
+        excerpt: 'Get your seeds off to the best start with proper sowing depth, moisture and warmth.',
+        content: `
+          <p>Starting plants from seed is deeply rewarding and economical. Follow these steps for a high germination rate.</p>
+          <h3>Read the Packet</h3>
+          <p>Most seed packets list sowing depth, spacing, light needs and days to germination. These details matter — follow them closely.</p>
+          <h3>Use Seed Starting Mix</h3>
+          <p>Use a fine, sterile seed mix rather than garden soil for the best germination and to avoid damping off disease.</p>
+          <h3>Sow at the Right Depth</h3>
+          <p>A general rule: plant seeds at a depth of about twice their diameter. Tiny seeds may just need light pressing onto the surface.</p>
+          <h3>Keep Moist & Warm</h3>
+          <p>Seeds need consistent moisture and warmth to germinate. Cover trays with a clear lid or plastic wrap and place on a heat mat if available.</p>
+          <h3>Harden Off Seedlings</h3>
+          <p>Before transplanting outdoors, slowly acclimate seedlings to sun and wind over a week to prevent shock.</p>
+        `
+      },
+      {
+        id: 6, title: 'Pot Selection: Size, Material & Drainage', category: 'Pots', icon: 'flower', image: 'https://images.unsplash.com/photo-1485955900006-10f4d324d411',
+        excerpt: 'Pick the perfect pot for your plant with this guide to sizes, materials and drainage.',
+        content: `
+          <p>The right pot keeps your plant healthy and your space beautiful. Here's how to choose.</p>
+          <h3>Size Matters</h3>
+          <p>Choose a pot 1-2 inches larger than the current root ball for most houseplants. Too-large pots hold excess water and risk root rot.</p>
+          <h3>Material Options</h3>
+          <p>Terracotta is porous, breathable and dries faster — great for succulents. Ceramic glazed pots hold moisture longer. Plastic is lightweight and economical. Wood adds rustic charm.</p>
+          <h3>Drainage is Essential</h3>
+          <p>Always choose pots with drainage holes. Soggy, waterlogged soil suffocates roots. Use a saucer or tray to catch overflow.</p>
+          <h3>When to Repot</h3>
+          <p>Repot when roots emerge from drainage holes, growth slows, or soil dries out too quickly. Spring is the best time.</p>
+          <h3>Aesthetics</h3>
+          <p>Match pot style to your decor. Neutral tones let your plants shine; bold colors make a statement.</p>
+        `
+      },
+      {
+        id: 7, title: 'Pest Prevention: Keep Your Garden Healthy', category: 'Pest Prevention', icon: 'bug', image: 'https://images.unsplash.com/photo-1622021142947-da7dedc7c39a',
+        excerpt: 'Stop common garden pests before they start with these natural, effective prevention tips.',
+        content: `
+          <p>A healthy garden resists pests naturally. Prevention is always easier than treatment.</p>
+          <h3>Inspect Regularly</h3>
+          <p>Check leaves (especially undersides) weekly for signs of pests — tiny bugs, webbing, sticky residue or mottled leaves.</p>
+          <h3>Common Pests</h3>
+          <p>Aphids cluster on new growth. Spider mites cause fine webbing and stippling. Mealybugs appear as white cottony masses. Scale look like brown bumps on stems.</p>
+          <h3>Natural Controls</h3>
+          <p>Blast pests off with water, wipe with neem oil or insecticidal soap, and introduce beneficial insects like ladybugs.</p>
+          <h3>Encourage Beneficials</h3>
+          <p>Plant flowers that attract ladybugs, lacewings and pollinators. A diverse garden is more resilient.</p>
+          <h3>Good Practices</h3>
+          <p>Quarantine new plants, keep foliage dry, remove dead leaves, and maintain airflow to minimize pest and disease pressure.</p>
+        `
+      },
+      {
+        id: 8, title: 'Seasonal Gardening: Plan for Every Season', category: 'Seasonal', icon: 'calendar', image: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735',
+        excerpt: 'A season-by-season calendar to keep your garden productive, colorful and thriving all year.',
+        content: `
+          <p>Gardening is a year-round joy when you plan for each season. Here's a practical guide.</p>
+          <h3>Spring</h3>
+          <p>Prep beds, plant frost-sensitive veggies, start seeds indoors, and refresh containers with new potting mix and slow-release fertilizer.</p>
+          <h3>Summer</h3>
+          <p>Water deeply during heat, mulch to conserve moisture, deadhead blooms, and harvest vegetables regularly to encourage more production.</p>
+          <h3>Autumn</h3>
+          <p>Plant cool-season crops, add compost, bring tender plants indoors, and divide perennials before the ground freezes.</p>
+          <h3>Winter</h3>
+          <p>Protect plants with mulch, prune dormant trees, plan your spring garden, and care for indoor plants with reduced watering.</p>
+          <h3>Keep a Journal</h3>
+          <p>Note what works each season. Over time, your garden will become healthier and more productive.</p>
+        `
+      }
+    ];
+
+    let careFilter = { search: '', categories: [] };
+
+    function createArticleCard(article) {
+      return `
+        <article class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg card-hover flex flex-col reveal">
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-center justify-between mb-3">
+              <span class="inline-flex items-center px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300 text-xs font-semibold rounded-full">
+                ${article.category}
+              </span>
+              <span class="text-xs text-gray-400 dark:text-gray-500"><i data-lucide="clock" class="w-3.5 h-3.5 inline mr-1"></i>5 min read</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2 leading-snug">${article.title}</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 flex-1">${article.excerpt}</p>
+            <button onclick="openCareModal(${article.id})" class="inline-flex items-center text-green-700 dark:text-green-400 font-medium hover:underline">
+              Read Article <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+            </button>
+          </div>
+        </article>
+      `;
+    }
+
+    function renderCareArticles() {
+      const grid = document.getElementById('care-grid');
+      const countEl = document.getElementById('care-count');
+      if (!grid) return;
+
+      let result = [...careArticles];
+
+      if (careFilter.search) {
+        const q = careFilter.search.toLowerCase();
+        result = result.filter(a => a.title.toLowerCase().includes(q) || a.category.toLowerCase().includes(q) || a.excerpt.toLowerCase().includes(q));
+      }
+
+      if (careFilter.categories.length > 0) {
+        result = result.filter(a => careFilter.categories.includes(a.category));
+      }
+
+      grid.innerHTML = result.map(a => createArticleCard(a)).join('');
+      if (countEl) countEl.textContent = `${result.length} article${result.length !== 1 ? 's' : ''}`;
+
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+      initScrollAnimations();
+    }
+
+    function updateCareSearch(value) {
+      careFilter.search = value;
+      renderCareArticles();
+    }
+
+    function updateCareCategoryButtons() {
+      const buttons = document.querySelectorAll('[data-care-cat]');
+      buttons.forEach(btn => {
+        const cat = btn.getAttribute('data-care-cat');
+        const active = careFilter.categories.includes(cat);
+        if (active) {
+          btn.classList.add('bg-green-700', 'text-white', 'border-green-700');
+          btn.classList.remove('text-gray-700', 'dark:text-gray-300');
+        } else {
+          btn.classList.remove('bg-green-700', 'text-white', 'border-green-700');
+          btn.classList.add('text-gray-700', 'dark:text-gray-300');
+        }
+      });
+    }
+
+    function toggleCareCategory(category) {
+      const idx = careFilter.categories.indexOf(category);
+      if (idx > -1) careFilter.categories.splice(idx, 1);
+      else careFilter.categories.push(category);
+      renderCareArticles();
+      updateCareCategoryButtons();
+    }
+
+    function openCareModal(id) {
+      const article = careArticles.find(a => a.id === id);
+      if (!article) return;
+
+      const modal = document.createElement('div');
+      modal.id = 'care-modal';
+      modal.className = 'modal-overlay fixed inset-0 z-[70] bg-black/60 flex items-center justify-center p-4';
+      modal.innerHTML = `
+        <div class="modal-content bg-white dark:bg-gray-900 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl" onclick="event.stopPropagation()">
+          <div class="sticky top-0 flex items-center justify-between px-6 py-4 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
+            <span class="text-xs font-semibold text-green-600 dark:text-green-400 uppercase tracking-wider">${article.category}</span>
+            <button onclick="closeCareModal()" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Close">
+              <i data-lucide="x" class="w-5 h-5 text-gray-600 dark:text-gray-400"></i>
+            </button>
+          </div>
+          <div class="p-6 sm:p-8">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">${article.title}</h2>
+            <div class="max-w-none text-gray-700 dark:text-gray-300 leading-relaxed">
+              <style>
+                #care-modal h3{font-weight:600;color:inherit;margin-top:1.5rem;margin-bottom:.5rem;font-size:1.15rem}
+                #care-modal p{margin-bottom:1rem}
+              </style>
+              ${article.content}
+            </div>
+          </div>
+        </div>
+      `;
+
+      document.body.appendChild(modal);
+      document.body.style.overflow = 'hidden';
+      modal.addEventListener('click', (e) => { if (e.target === modal) closeCareModal(); });
+      requestAnimationFrame(() => modal.classList.add('active'));
+
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    }
+
+    function closeCareModal() {
+      const modal = document.getElementById('care-modal');
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        setTimeout(() => modal.remove(), 300);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCareArticles();
+    });
+  </script>
+
+  <main class="pt-16 lg:pt-20">
+
+    <!-- Header -->
+    <section class="relative hero-gradient text-white py-12 lg:py-16 overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="assets/images/plantcare%20hero.jpg" alt="GreenNest plant care hero" class="w-full h-full object-cover">
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-r from-green-950/90 via-green-900/75 to-green-900/55"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav class="text-sm text-green-200/80 mb-4">
+          <a href="index.html" class="hover:text-white">Home</a>
+          <span class="mx-2">/</span>
+          <span class="text-white">Plant Care</span>
+        </nav>
+        <h1 class="text-3xl sm:text-4xl font-bold mb-3 hero-text-shadow">Plant Care Guide</h1>
+        <p class="text-green-100/90 max-w-2xl hero-text-shadow">Expert advice to help your plants thrive — from watering and soil to pest control and seasonal care.</p>
+      </div>
+    </section>
+
+    <!-- Search -->
+    <section class="py-8 lg:py-10 bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative max-w-2xl mx-auto">
+          <i data-lucide="search" class="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+          <input type="text" placeholder="Search care guides..." oninput="updateCareSearch(this.value)" class="w-full pl-12 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-cream-50 dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500">
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles -->
+    <section class="py-10 lg:py-14">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="care-count" class="text-sm text-gray-500 dark:text-gray-400 mb-6"></p>
+
+        <!-- Category filter chips -->
+        <div id="care-categories" class="flex flex-wrap gap-2 mb-8"></div>
+
+        <div id="care-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const cats = ['Indoor Care', 'Watering', 'Soil', 'Fertilizers', 'Seeds', 'Pots', 'Pest Prevention', 'Seasonal'];
+      const container = document.getElementById('care-categories');
+      if (container) {
+        container.innerHTML = cats.map(c => `
+          <button data-care-cat="${c}" onclick="toggleCareCategory('${c}')" class="px-4 py-2 rounded-full border border-gray-300 dark:border-gray-600 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-green-50 dark:hover:bg-gray-700 transition-colors">
+            ${c}
+          </button>
+        `).join('');
+      }
+    });
+  </script>
+
+</body>
+</html>

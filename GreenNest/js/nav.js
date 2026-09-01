@@ -21,7 +21,7 @@ function renderNavbar() {
 
             <!-- Home Dropdown -->
             <div class="dropdown">
-              <button class="inline-flex items-center px-3 py-2 text-sm rounded-lg transition-all duration-200 ${homeActive}">
+              <button class="inline-flex items-center px-2 py-2 text-sm rounded-lg transition-all duration-200 ${homeActive}">
                 Home
                 <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
               </button>
@@ -35,36 +35,36 @@ function renderNavbar() {
               </div>
             </div>
 
-            <a href="about.html" class="px-3 py-2 text-sm rounded-lg transition-all duration-200 ${isActive('about.html')}">About</a>
-            <a href="products.html" class="px-3 py-2 text-sm rounded-lg transition-all duration-200 ${isActive('products.html')}">Products</a>
-            <a href="plant-care.html" class="px-3 py-2 text-sm rounded-lg transition-all duration-200 ${isActive('plant-care.html')}">Plant Care</a>
-            <a href="bulk-orders.html" class="px-3 py-2 text-sm rounded-lg transition-all duration-200 ${isActive('bulk-orders.html')}">Bulk Orders</a>
-            <a href="contact.html" class="px-3 py-2 text-sm rounded-lg transition-all duration-200 ${isActive('contact.html')}">Contact</a>
+            <a href="about.html" class="px-2 py-2 text-sm rounded-lg transition-all duration-200 ${isActive('about.html')}">About</a>
+            <a href="products.html" class="px-2 py-2 text-sm rounded-lg transition-all duration-200 ${isActive('products.html')}">Products</a>
+            <a href="plant-care.html" class="px-2 py-2 text-sm rounded-lg transition-all duration-200 ${isActive('plant-care.html')}">Plant Care</a>
+            <a href="bulk-orders.html" class="px-2 py-2 text-sm rounded-lg transition-all duration-200 ${isActive('bulk-orders.html')}">Bulk Orders</a>
+            <a href="contact.html" class="px-2 py-2 text-sm rounded-lg transition-all duration-200 ${isActive('contact.html')}">Contact</a>
           </div>
 
           <!-- Right Actions -->
-          <div class="flex items-center space-x-2">
+          <div class="flex items-center space-x-1.5">
 
             <!-- Theme Toggle -->
-            <button onclick="toggleTheme()" class="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" title="Toggle theme" id="theme-toggle-desktop">
+            <button onclick="toggleTheme()" class="hidden lg:inline-flex p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" title="Toggle theme" id="theme-toggle-desktop">
               <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
               <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
             </button>
 
             <!-- RTL / LTR Toggle -->
-            <button onclick="toggleDir()" class="px-2.5 py-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-sm font-semibold" title="Toggle RTL / LTR direction" id="dir-toggle">
+            <button onclick="toggleDir()" class="hidden lg:inline-flex px-2 py-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-sm font-semibold" title="Toggle RTL / LTR direction" id="dir-toggle">
               <span id="dir-label">LTR</span>
             </button>
 
             <!-- Login -->
-            <a href="login.html" class="hidden sm:inline-flex items-center px-4 py-2 border border-green-700 dark:border-green-500 text-green-700 dark:text-green-400 text-sm font-medium rounded-lg hover:bg-green-50 dark:hover:bg-green-900/30 transition-colors">
-              <i data-lucide="log-in" class="w-4 h-4 mr-2"></i>
+            <a href="login.html" class="hidden lg:inline-flex items-center px-3 py-2 border border-green-700 dark:border-green-500 text-green-700 dark:text-green-400 text-sm font-medium rounded-lg hover:bg-green-50 dark:hover:bg-green-900/30 transition-colors">
+              <i data-lucide="log-in" class="w-4 h-4 mr-1.5"></i>
               Login
             </a>
 
             <!-- Sign Up -->
-            <a href="signup.html" class="hidden sm:inline-flex items-center px-4 py-2 bg-green-700 hover:bg-green-800 dark:bg-green-600 dark:hover:bg-green-700 text-white text-sm font-medium rounded-lg transition-colors shadow-sm">
-              <i data-lucide="user-plus" class="w-4 h-4 mr-2"></i>
+            <a href="signup.html" class="hidden lg:inline-flex items-center px-3 py-2 bg-green-700 hover:bg-green-800 dark:bg-green-600 dark:hover:bg-green-700 text-white text-sm font-medium rounded-lg transition-colors shadow-sm">
+              <i data-lucide="user-plus" class="w-4 h-4 mr-1.5"></i>
               Sign Up
             </a>
 
@@ -99,7 +99,7 @@ function renderNavbar() {
             <!-- Home accordion -->
             <div>
               <button onclick="toggleMobileHome()" class="w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
-                <span class="flex items-center"><i data-lucide="home" class="w-5 h-5 mr-3"></i><span class="font-medium">Home</span></span>
+                <span class="font-medium">Home</span>
                 <i data-lucide="chevron-down" class="w-4 h-4 transition-transform" id="mobile-home-chevron"></i>
               </button>
               <div id="mobile-home-submenu" class="hidden pl-11 space-y-1 mt-1">
@@ -108,41 +108,32 @@ function renderNavbar() {
               </div>
             </div>
 
-            <a href="about.html" class="flex items-center space-x-3 px-3 py-2.5 rounded-lg ${currentPage === 'about.html' ? 'bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}">
-              <i data-lucide="info" class="w-5 h-5"></i>
+            <a href="about.html" class="block px-3 py-2.5 rounded-lg ${currentPage === 'about.html' ? 'bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}">
               <span class="font-medium">About</span>
             </a>
-            <a href="products.html" class="flex items-center space-x-3 px-3 py-2.5 rounded-lg ${currentPage === 'products.html' ? 'bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}">
-              <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+            <a href="products.html" class="block px-3 py-2.5 rounded-lg ${currentPage === 'products.html' ? 'bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}">
               <span class="font-medium">Products</span>
             </a>
-            <a href="plant-care.html" class="flex items-center space-x-3 px-3 py-2.5 rounded-lg ${currentPage === 'plant-care.html' ? 'bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}">
-              <i data-lucide="sprout" class="w-5 h-5"></i>
+            <a href="plant-care.html" class="block px-3 py-2.5 rounded-lg ${currentPage === 'plant-care.html' ? 'bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}">
               <span class="font-medium">Plant Care</span>
             </a>
-            <a href="bulk-orders.html" class="flex items-center space-x-3 px-3 py-2.5 rounded-lg ${currentPage === 'bulk-orders.html' ? 'bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}">
-              <i data-lucide="package" class="w-5 h-5"></i>
+            <a href="bulk-orders.html" class="block px-3 py-2.5 rounded-lg ${currentPage === 'bulk-orders.html' ? 'bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}">
               <span class="font-medium">Bulk Orders</span>
             </a>
-            <a href="contact.html" class="flex items-center space-x-3 px-3 py-2.5 rounded-lg ${currentPage === 'contact.html' ? 'bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}">
-              <i data-lucide="mail" class="w-5 h-5"></i>
+            <a href="contact.html" class="block px-3 py-2.5 rounded-lg ${currentPage === 'contact.html' ? 'bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}">
               <span class="font-medium">Contact</span>
             </a>
           </div>
 
           <div class="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
-            <div class="flex items-center justify-between px-3 py-2">
-              <span class="text-sm text-gray-500 dark:text-gray-400">Dark Mode</span>
-              <button onclick="toggleTheme()" class="p-1.5 rounded-lg bg-gray-100 dark:bg-gray-800">
-                <i data-lucide="sun" class="w-4 h-4 hidden dark:block text-yellow-500"></i>
-                <i data-lucide="moon" class="w-4 h-4 block dark:hidden text-gray-600"></i>
+            <div class="flex justify-center items-center gap-3 px-3 py-2">
+              <button onclick="toggleTheme()" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800" title="Toggle dark / light theme">
+                <i data-lucide="sun" class="w-6 h-6 hidden dark:block text-yellow-500"></i>
+                <i data-lucide="moon" class="w-6 h-6 block dark:hidden text-gray-600"></i>
               </button>
-            </div>
-
-            <div class="flex items-center justify-between px-3 py-2">
-              <span class="text-sm text-gray-500 dark:text-gray-400">RTL / LTR</span>
-              <button onclick="toggleDir()" class="px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 text-sm font-semibold text-gray-700 dark:text-gray-300">
-                <span id="mobile-dir-label">LTR</span>
+              <button onclick="toggleDir()" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800" title="Toggle RTL / LTR direction">
+                <i data-lucide="arrow-right" id="mobile-dir-icon-ltr" class="w-6 h-6 block text-gray-600 dark:text-gray-400"></i>
+                <i data-lucide="arrow-left" id="mobile-dir-icon-rtl" class="w-6 h-6 hidden text-gray-600 dark:text-gray-400"></i>
               </button>
             </div>
 

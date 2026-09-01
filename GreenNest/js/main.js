@@ -130,9 +130,11 @@ function updateDirLabel() {
   const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
   const label = isRTL ? 'RTL' : 'LTR';
   const desktopLabel = document.getElementById('dir-label');
-  const mobileLabel = document.getElementById('mobile-dir-label');
+  const mobileLtrIcon = document.getElementById('mobile-dir-icon-ltr');
+  const mobileRtlIcon = document.getElementById('mobile-dir-icon-rtl');
   if (desktopLabel) desktopLabel.textContent = label;
-  if (mobileLabel) mobileLabel.textContent = label;
+  if (mobileLtrIcon) mobileLtrIcon.classList.toggle('hidden', isRTL);
+  if (mobileRtlIcon) mobileRtlIcon.classList.toggle('hidden', !isRTL);
 }
 
 function updateThemeIcons() {

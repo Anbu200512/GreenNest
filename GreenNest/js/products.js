@@ -115,11 +115,11 @@ function createProductCard(product) {
         </div>
 
         <div class="flex space-x-2">
-          <button onclick="addToCart(getProductById(${product.id}))" class="flex-1 px-4 py-2 bg-green-700 hover:bg-green-800 dark:bg-green-600 dark:hover:bg-green-700 text-white font-medium rounded-xl transition-colors shadow-sm flex items-center justify-center">
-            <i data-lucide="shopping-cart" class="w-4 h-4 mr-2"></i>
+          <button onclick="addToCart(getProductById(${product.id}))" class="flex-1 px-3 py-1.5 bg-green-700 hover:bg-green-800 dark:bg-green-600 dark:hover:bg-green-700 text-white text-sm font-medium rounded-xl transition-colors shadow-sm flex items-center justify-center">
+            <i data-lucide="shopping-cart" class="w-4 h-4 mr-1.5"></i>
             Add to Cart
           </button>
-          <button onclick="openProductModal(${product.id})" class="px-4 py-2 border border-green-700 dark:border-green-500 text-green-700 dark:text-green-400 hover:bg-green-50 dark:hover:bg-green-900/30 font-medium rounded-xl transition-colors">
+          <button onclick="openProductModal(${product.id})" class="px-3 py-1.5 border border-green-700 dark:border-green-500 text-green-700 dark:text-green-400 hover:bg-green-50 dark:hover:bg-green-900/30 font-medium rounded-xl transition-colors">
             <i data-lucide="eye" class="w-4 h-4"></i>
           </button>
         </div>

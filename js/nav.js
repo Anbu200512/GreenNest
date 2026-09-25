@@ -46,27 +46,15 @@ function renderNavbar() {
           <div class="flex items-center space-x-1.5">
 
             <!-- Theme Toggle -->
-            <button onclick="toggleTheme()" class="hidden lg:inline-flex p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" title="Toggle theme" id="theme-toggle-desktop">
+            <button onclick="toggleTheme()" class="hidden lg:inline-flex w-10 h-10 items-center justify-center rounded-full border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" title="Toggle theme" id="theme-toggle-desktop">
               <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
               <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
             </button>
 
             <!-- RTL / LTR Toggle -->
-            <button onclick="toggleDir()" class="hidden lg:inline-flex px-2 py-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-sm font-semibold" title="Toggle RTL / LTR direction" id="dir-toggle">
+            <button onclick="toggleDir()" class="hidden lg:inline-flex w-10 h-10 items-center justify-center rounded-full border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-xs font-semibold" title="Toggle RTL / LTR direction" id="dir-toggle">
               <span id="dir-label">LTR</span>
             </button>
-
-            <!-- Login -->
-            <a href="login.html" class="hidden lg:inline-flex items-center px-3 py-2 border border-green-700 dark:border-green-500 text-green-700 dark:text-green-400 text-sm font-medium rounded-lg hover:bg-green-50 dark:hover:bg-green-900/30 transition-colors">
-              <i data-lucide="log-in" class="w-4 h-4 mr-1.5"></i>
-              Login
-            </a>
-
-            <!-- Sign Up -->
-            <a href="signup.html" class="hidden lg:inline-flex items-center px-3 py-2 bg-green-700 hover:bg-green-800 dark:bg-green-600 dark:hover:bg-green-700 text-white text-sm font-medium rounded-lg transition-colors shadow-sm">
-              <i data-lucide="user-plus" class="w-4 h-4 mr-1.5"></i>
-              Sign Up
-            </a>
 
             <!-- Mobile Hamburger -->
             <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" id="hamburger-btn">
@@ -137,15 +125,7 @@ function renderNavbar() {
               </button>
             </div>
 
-            <div class="mt-4 space-y-2">
-              <a href="login.html" class="flex items-center justify-center w-full px-4 py-2.5 border border-green-700 dark:border-green-500 text-green-700 dark:text-green-400 font-medium rounded-lg transition-colors">
-                <i data-lucide="log-in" class="w-4 h-4 mr-2"></i>Login
-              </a>
-              <a href="signup.html" class="flex items-center justify-center w-full px-4 py-2.5 bg-green-700 hover:bg-green-800 text-white font-medium rounded-lg transition-colors">
-                <i data-lucide="user-plus" class="w-4 h-4 mr-2"></i>Sign Up
-              </a>
             </div>
-          </div>
         </div>
       </div>
     </div>
